@@ -25,6 +25,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 ## Inherit from beyond0lte device
 $(call inherit-product, device/samsung/beyond0lte/device.mk)
 
+## Device config
+TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+## Gapps
+WITH_GMS := true
+TARGET_INCLUDE_GOOGLE_TELEPHONY := true
+TARGET_INCLUDE_PIXEL_FRAMEWORK := true
+TARGET_INCLUDE_GOOGLE_CAMERA := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_GMAIL := false
+TARGET_INCLUDE_GOOGLE_MAPS := true
+
+## Maintainer
+ALPHA_BUILD_TYPE := Official
+ALPHA_MAINTAINER := Mgm2023
+
 ## Boot Animation
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2280
